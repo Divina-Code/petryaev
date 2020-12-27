@@ -8,4 +8,4 @@ if len(str(year)) == 4:
     age = int(2020-year)
     print('u are already', age, '!')
 else:
-    print('oh, how can it be so? u were not born, yet? or u made a mistake? ')
+    print('oh, how can it be so? u were not born, yet, or u r so old? or u made a mistake? ')
