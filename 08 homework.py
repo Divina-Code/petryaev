@@ -3,7 +3,7 @@ productlist=[]  #список продуктов
 
 
 while meme != True:
-    answer = int(input('press "1" to add smth to ur shop list, press "2" to drop smth out from it and press "3" to look at list '))
+    answer = int(input('press 1, 2 or 3 '))
     if answer == 1:
         add = input('choose what do u want to add ')  #то, что нужно добавить в список
         productlist.append(add)
@@ -12,3 +12,7 @@ while meme != True:
         productlist.pop(dropout)
     elif answer == 3:
         print(productlist)
+    else:
+        print('try again')
+
+
