@@ -1,9 +1,7 @@
 from random import randint as ri
-from time import sleep
 print('find the mystery number')
 mysterynumber = ri(0, 100)
 guessed = False
-sleep(3)
 while guessed != True:
     answer = int(input('the mystery number is '))
     if answer == mysterynumber:
