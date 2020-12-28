@@ -1,17 +1,22 @@
 from random import randint as ri
-from time import sleep
-game1 = False
-game2 = False
-game3 = False
-guessed1 = False
-guessed2 = False
-guessed3 = False
-player1 = ri(1, 10)
-player2 = ri(1, 10)
-player3 = ri(1, 10)
+
+
+
+game1 = False       #находится ли 1 игрок в игре
+game2 = False       #находится ли 2 игрок в игре
+game3 = False       #находится ли 3 игрок в игре
+guessed1 = False      #проиграл ли игрок 1
+guessed2 = False      #проиграл ли игрок 2
+guessed3 = False      #проиграл ли игрок 3
+player1 = ri(1, 10)    #очки игрока 1
+player2 = ri(1, 10)    #очки игрока 2
+player3 = ri(1, 10)    #очки игрока 3
 print(player1)
 print(player2)
 print(player3)
+
+
+
 while game1 != True or game2 != True or game3 !=True:
 
     while guessed1 != True:
@@ -29,6 +34,8 @@ while game1 != True or game2 != True or game3 !=True:
             print(player1)
             print('the end for player1     ', player1, 'points')
             game1 = True
+
+
     while guessed2 != True:
         do2 = input('take2 ')
         if do2 == 'yes' and player2 < 21:
@@ -44,6 +51,8 @@ while game1 != True or game2 != True or game3 !=True:
             print(player2)
             print('the end for player2     ', player2, 'points')
             game2 = True
+
+
     while guessed3 != True:
         do3 = input('take3 ')
         if do3 == 'yes' or do3 == 'no' and player3 < 21:
@@ -60,6 +69,8 @@ while game1 != True or game2 != True or game3 !=True:
             print(player3)
             print('the end for player3     ', player3, 'points')
             game3 = True
+
+            
 if player1 > player2 and player1 > player3 and player1 <= 21:
     print('and the winner is ')
     print('player1')
