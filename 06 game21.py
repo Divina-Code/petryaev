@@ -19,10 +19,11 @@ while game1 != True or game2 != True or game3 !=True:
         if do1 == 'yes' and player1 < 21:
             player1 += ri(1,10)
             print(player1)
-        elif do1 == 'yes' and player1 > 21:
+        elif do1 == 'yes' or do1 == 'no' and player1 > 21:
             player1 = 0
             game1 = True
             guessed1 = True
+            print('player1 has ', player1,'points')
         else:
             guessed1 = True
             print(player1)
@@ -33,10 +34,11 @@ while game1 != True or game2 != True or game3 !=True:
         if do2 == 'yes' and player2 < 21:
             player2 += ri(1,10)
             print(player2)
-        elif do2 == 'yes' and player1 > 21:
+        elif do2 == 'yes' or do2 == 'no' and player2 > 21:
             player2 = 0
             game2 = True
             guessed2 = True
+            print('player2 has ', player2,'points')
         else:
             guessed2 = True
             print(player2)
@@ -44,14 +46,15 @@ while game1 != True or game2 != True or game3 !=True:
             game2 = True
     while guessed3 != True:
         do3 = input('take3 ')
-        if do3 == 'yes' and player3 < 21:
+        if do3 == 'yes' or do3 == 'no' and player3 < 21:
             player3 += ri(1,10)
             print(player3)
 
-        elif do3 == 'yes' and player1 > 21:
+        elif do3 == 'yes' or do3 == 'no' and player2 > 21:
             player3 = 0
             game3 = True
             guessed3 = True
+            print('player3 has ', player3,'points')
         else:
             guessed3 = True
             print(player3)
@@ -59,14 +62,13 @@ while game1 != True or game2 != True or game3 !=True:
             game3 = True
 if player1 > player2 and player1 > player3 and player1 <= 21:
     print('and the winner is ')
-    sleep(3)
     print('player1')
 elif player2 > player1 and player2 > player3 and player2 <= 21:
     print('and the winner is ')
-    sleep(3)
     print('player2')
 elif player3 > player2 and player3 > player1 and player3 <= 21:
     print('and the winner is ')
-    sleep(3)
     print('player3')
+else:
+    print('and it is a draw')
 
