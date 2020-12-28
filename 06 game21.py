@@ -35,7 +35,7 @@ while game1 != True or game2 != True or game3 !=True:
             print('the end for player1     ', player1, 'points')
             game1 = True
 
-
+    print('?'*100)
     while guessed2 != True:
         do2 = input('take2 ')
         if do2 == 'yes' and player2 < 21:
@@ -52,7 +52,7 @@ while game1 != True or game2 != True or game3 !=True:
             print('the end for player2     ', player2, 'points')
             game2 = True
 
-
+    print('?'*100)
     while guessed3 != True:
         do3 = input('take3 ')
         if do3 == 'yes' or do3 == 'no' and player3 < 21:
@@ -70,7 +70,7 @@ while game1 != True or game2 != True or game3 !=True:
             print('the end for player3     ', player3, 'points')
             game3 = True
 
-            
+
 if player1 > player2 and player1 > player3 and player1 <= 21:
     print('and the winner is ')
     print('player1')
