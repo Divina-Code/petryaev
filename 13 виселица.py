@@ -2,11 +2,7 @@ from random import choice as ch
 
 while True:  #вводим программу в бесконечный цикл
 #вводим в игру слова
-    w = 'ball'
-    ww = 'game'
-    www = 'net'
-    wwww = 'soul'
-    list = [w, ww, www]
+    list = ['soul', 'ball', 'net', 'game']
     word = ch(list)
 
     guessed = False  #отгадано ли слово(закончена ли игра)
@@ -19,9 +15,9 @@ while True:  #вводим программу в бесконечный цикл
             for a in word:
                 letters.append('_')
             print(''.join(letters))
-        lives -= 1  #отнимаем жизнь каждую попытку
         answer = input('write down one letter or whole word ')  #вводим преполагаемую букву или слово
     #заменяем каждый пробел буквой
+        lives -= 1  #отнимаем жизнь каждую попытку
         for a in range(len(word)):
             if answer == word[a]:
                 letters[a] = word[a]
