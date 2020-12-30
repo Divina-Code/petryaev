@@ -1,6 +1,6 @@
 import telebot
 
-bot = telebot.TeleBot('1362891506:AAEsh6hGWypbbxpDUO-6jULCrLGwkCnpjDU')  #создаем подключение к боту
+bot = telebot.TeleBot('')  #создаем подключение к боту
 
 
 @bot.message_handler(content_types=['text'])
